@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body,html{
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
 header{
     padding: 10px;
 }
@@ -11,7 +15,7 @@ header>.tw-icon>svg {
     display: block;
     fill: #ffab00;
 }
-.storys-wrap{
+.stories-wrap{
     padding: 0 10px;
 }
 
