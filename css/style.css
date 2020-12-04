@@ -48,7 +48,7 @@ header>.tw-icon>svg {
 
 .tweet-content {
     display: flex;
-    padding: 5px 10px;
+    padding: 5px 5px 5px 13px;
 }
 
 .tweet-content+.tweet-content {
