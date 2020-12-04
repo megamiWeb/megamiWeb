@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-body,html{
+body,
+html {
     position: relative;
 }
 
@@ -59,12 +60,12 @@ body,html{
     padding: 40px;
 }
 
-.heading-anim{
-position: absolute;
-z-index: 200;
-top: 170px;
-left: 0px;
-color: #FFFFFF;
+.heading-anim {
+    position: absolute;
+    z-index: 200;
+    top: 8%;
+    left: 0px;
+    color: #FFFFFF;
     animation-name: itemAnime;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
@@ -72,12 +73,25 @@ color: #FFFFFF;
     animation-delay: 2400ms;
     animation-fill-mode: forwards;
     opacity: 0;
-text-align: center;
+    text-align: center;
 }
 
-.anim-img{
+.anim-img {
     max-width: 100%;
 }
+
+.scroll-button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+    z-index: 600;
+}
+
 ​ ​
 
 /* アニメーション要素内アイテム */
@@ -110,7 +124,7 @@ text-align: center;
     }
 
     to {
-        height: 100%;
+        height: 100vh;
         padding: 30px;
         display: none;
     }
@@ -122,7 +136,7 @@ text-align: center;
     }
 
     to {
-        height: 100%;
+        height: 100vh;
         padding: 30px;
         display: none;
     }
@@ -145,5 +159,79 @@ text-align: center;
 
     to {
         opacity: 1;
+    }
+}
+
+
+.scroll-button {
+    padding-top: 80px;
+    animation-name: itemAnime;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 2400ms;
+    animation-delay: 2400ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.scroll-button span {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 6px solid rgb(255, 255, 255);
+    border-bottom: 6px solid rgb(255, 255, 255);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.scroll-button span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.scroll-button span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+
+.scroll-button span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
