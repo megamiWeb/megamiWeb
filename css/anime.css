@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+body,html{
+    position: relative;
+}
+
+/* アニメーション要素 */
+.test {
+    display: flex;
+    height: 100vh;
+}
+
+.elm1 {
+    /* display: inline-block; */
+    height: 0px;
+    width: 50%;
+    background-color: rgb(255, 213, 74);
+    animation-name: el1Anime;
+    animation-duration: 1800ms;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-break: break-word;
+    position: absolute;
+    z-index: 100;
+}
+
+.elm2 {
+    animation-delay: 1000ms;
+    /* display: inline-block; */
+    height: 0px;
+    width: 50%;
+    background-color: #D7BBFF;
+    animation-fill-mode: forwards;
+    animation-name: el2Anime;
+    animation-duration: 2500ms;
+    vertical-align: top;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-break: break-word;
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+}
+
+
+.elm3 {
+    animation-name: el3Anime;
+    width: 100%;
+    border-top: 4px #474747 solid;
+    display: block;
+    animation-delay: 1800ms;
+    animation-duration: 4000ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    padding: 40px;
+}
+
+.heading-anim{
+position: absolute;
+z-index: 200;
+top: 170px;
+left: 0px;
+color: #FFFFFF;
+    animation-name: itemAnime;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 2400ms;
+    animation-delay: 2400ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+text-align: center;
+}
+
+.anim-img{
+    max-width: 100%;
+}
+​ ​
+
+/* アニメーション要素内アイテム */
+.elm1 .heading {
+    color: #FFFFFF;
+    animation-name: itemAnime;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 2400ms;
+    animation-delay: 2400ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.elm2 .text {
+    color: #181818;
+    animation-name: itemAnime;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 2400ms;
+    animation-delay: 2400ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* アニメーション */
+@keyframes el2Anime {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 100%;
+        padding: 30px;
+        display: none;
+    }
+}
+
+@keyframes el1Anime {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 100%;
+        padding: 30px;
+        display: none;
+    }
+}
+
+@keyframes el3Anime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes itemAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

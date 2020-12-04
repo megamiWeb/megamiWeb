@@ -2,19 +2,14 @@
 
 body,
 html {
-     font-family: apple-system,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif; 
+    font-family: apple-system, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
 }
 
-header {
-  
-}
-
-
-header > .tw-icon > img{
+header>.tw-icon>img {
     height: 40px;
     margin: 0 auto;
     display: block;
-   
+
 }
 
 .stories-wrap {
@@ -65,7 +60,8 @@ header > .tw-icon > img{
     border-radius: 50%;
     height: 50px;
 }
-.tweet-text{
+
+.tweet-text {
     margin: 5px 0;
     font-size: 15px;
 }
@@ -73,6 +69,7 @@ header > .tw-icon > img{
 .tweet-icon-wrap {
     display: flex;
 }
+
 /* 
 .tweet-user-info{
     max-width: 70vw;
@@ -98,38 +95,41 @@ footer {
     height: 30px;
     fill: #616161;
 }
+
 .footer-icon>svg.isActive {
     height: 30px;
     fill: #ff9900;
 }
 
-.tweet-username{
+.tweet-username {
     font-weight: bold;
     display: inline-block;
     margin-right: 4px;
     font-size: 16px;
 }
 
-.tweet-userid ,.tweet-time{
-    font-weight:normal;
+.tweet-userid,
+.tweet-time {
+    font-weight: normal;
     color: #616161;
     font-size: 15px;
 }
 
-.tweet-icon-wrap{
+.tweet-icon-wrap {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
     margin-right: 70px;
 }
 
-.tweet-icon-wrap svg{
+.tweet-icon-wrap svg {
     height: 15px;
     fill: #8c8c8c;
 }
-.tweet-icon-wrap span{
+
+.tweet-icon-wrap span {
     vertical-align: top;
-    color:#616161;
+    color: #616161;
     font-size: 14px;
 
 }
