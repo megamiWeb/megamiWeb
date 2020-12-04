@@ -24,12 +24,12 @@ header>.tw-icon>svg {
 .story-link>img {
     border-radius: 94%;
     border: 4px solid #6dda42;
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
 }
 
 .story-link {
-    width: 55px;
+    width: 45px;
     display: inline-block;
     text-decoration: none;
     text-align: center;
@@ -128,5 +128,8 @@ footer {
     fill: #8c8c8c;
 }
 .tweet-icon-wrap span{
-    vertical-align: bottom;
+    vertical-align: top;
+    color:#616161;
+    font-size: 14px;
+
 }
