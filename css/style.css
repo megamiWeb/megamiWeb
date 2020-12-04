@@ -6,15 +6,15 @@ html {
 }
 
 header {
-    padding: 10px;
+  
 }
 
 
-header>.tw-icon>svg {
-    height: 30px;
+header > .tw-icon > img{
+    height: 40px;
     margin: 0 auto;
     display: block;
-    fill: #ffab00;
+   
 }
 
 .stories-wrap {
