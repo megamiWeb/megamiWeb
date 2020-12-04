@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
-body,html{
+body,
+html {
     font-family: 'Kosugi Maru', sans-serif;
 }
 
-header{
+header {
     padding: 10px;
 }
 
@@ -15,7 +16,8 @@ header>.tw-icon>svg {
     display: block;
     fill: #ffab00;
 }
-.stories-wrap{
+
+.stories-wrap {
     padding: 0 10px;
 }
 
@@ -33,39 +35,41 @@ header>.tw-icon>svg {
     text-align: center;
 }
 
-.story-name{
+.story-name {
     font-size: 10px;
     color: #616161;
     vertical-align: top;
 }
-.tweet-wrap{
+
+.tweet-wrap {
     border-top: 0.5px solid #d3d3d3da;
     padding-bottom: 54px;
 }
-.tweet-content{
+
+.tweet-content {
     display: flex;
     padding: 5px 10px;
 }
 
-.tweet-content +.tweet-content{
+.tweet-content+.tweet-content {
     border-top: 0.5px solid #d3d3d3da;
 }
 
-.tweet-main-wrap{
+.tweet-main-wrap {
     width: 100%;
 }
 
 
-.tweet-user-img{
+.tweet-user-img {
     border-radius: 50%;
     height: 60px;
 }
 
-.tweet-icon-wrap{
+.tweet-icon-wrap {
     display: flex;
 }
 
-footer{
+footer {
     display: flex;
     position: fixed;
     bottom: 0;
@@ -74,9 +78,10 @@ footer{
     padding: 10px 7%;
     box-sizing: border-box;
     border-top: 0.5px solid #d3d3d3da;
+    background-color: #fff;
 }
 
-.footer-icon > svg{
+.footer-icon>svg {
     height: 30px;
     fill: #616161;
 }
