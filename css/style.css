@@ -23,7 +23,7 @@ header>.tw-icon>svg {
 
 .story-link>img {
     border-radius: 94%;
-    border: 4px solid #03dcff;
+    border: 4px solid #6dda42;
     height: 55px;
     width: 55px;
 }
@@ -98,6 +98,10 @@ footer {
     height: 30px;
     fill: #616161;
 }
+.footer-icon>svg.isActive {
+    height: 30px;
+    fill: #ff9900;
+}
 
 .tweet-username{
     font-weight: bold;
@@ -121,6 +125,7 @@ footer {
 
 .tweet-icon-wrap svg{
     height: 15px;
+    fill: #8c8c8c;
 }
 .tweet-icon-wrap span{
     vertical-align: bottom;
