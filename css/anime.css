@@ -63,7 +63,7 @@ html {
 .heading-anim {
     position: absolute;
     z-index: 200;
-    top: 8%;
+    top: 5%;
     left: 0px;
     color: #FFFFFF;
     animation-name: itemAnime;
@@ -80,20 +80,8 @@ html {
     max-width: 100%;
 }
 
-.scroll-button {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-decoration: none;
-    z-index: 600;
-}
 
-​ ​
-
+​ 
 /* アニメーション要素内アイテム */
 .elm1 .heading {
     color: #FFFFFF;
@@ -164,6 +152,15 @@ html {
 
 
 .scroll-button {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+    z-index: 600;
     padding-top: 80px;
     animation-name: itemAnime;
     -webkit-animation-duration: 1.5s;
