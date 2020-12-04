@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+header{
+    padding: 10px;
+}
+
 
 header>.tw-icon>svg {
     height: 30px;
@@ -7,17 +11,54 @@ header>.tw-icon>svg {
     display: block;
     fill: #ffab00;
 }
+.storys-wrap{
+    padding: 0 10px;
+}
 
 .story-link>img {
     border-radius: 94%;
     border: 4px solid #03dcff;
-    height: 74px;
-    width: 74px;
+    height: 55px;
+    width: 55px;
 }
 
 .story-link {
-    width: 100px;
+    width: 55px;
     display: inline-block;
     text-decoration: none;
     text-align: center;
+}
+
+.story-name{
+    font-size: 10px;
+    color: #616161;
+    vertical-align: top;
+}
+.tweet-wrap{
+    border-top: 0.5px solid #d3d3d3da;
+}
+.tweet-content{
+    display: flex;
+}
+
+
+.tweet-user-img{
+    border-radius: 50%;
+    height: 60px;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 7%;
+    box-sizing: border-box;
+    border-top: 0.5px solid #d3d3d3da;
+}
+
+.footer-icon > svg{
+    height: 30px;
+    fill: #616161;
 }
