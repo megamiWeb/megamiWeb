@@ -67,7 +67,7 @@ header>.tw-icon>svg {
 }
 .tweet-text{
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .tweet-icon-wrap {
@@ -101,5 +101,17 @@ footer {
 .tweet-userid ,.tweet-time{
     font-weight:normal;
     color: #616161;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.twee-reply-wrap,.tweet-retweet-wrap,.tweet-favorite-wrap{
+    display: inline-block;
+    
+}
+
+.tweet-icon-wrap svg{
+    height: 15px;
+}
+.tweet-icon-wrap span{
+    vertical-align: bottom;
 }
