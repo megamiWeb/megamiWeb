@@ -64,7 +64,8 @@ html {
     position: absolute;
     z-index: 200;
     top: 5%;
-    left: 0px;
+    left: 0;
+    right: 0;
     color: #FFFFFF;
     animation-name: itemAnime;
     -webkit-animation-duration: 1.5s;
@@ -80,8 +81,6 @@ html {
     max-width: 100%;
 }
 
-
-​ 
 /* アニメーション要素内アイテム */
 .elm1 .heading {
     color: #FFFFFF;

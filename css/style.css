@@ -70,15 +70,6 @@ header>.tw-icon>img {
     display: flex;
 }
 
-/* 
-.tweet-user-info{
-    max-width: 70vw;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-} */
-
 footer {
     display: flex;
     position: fixed;
