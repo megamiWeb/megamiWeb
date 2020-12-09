@@ -515,42 +515,6 @@
                 </g>
             </svg></a>
     </footer>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyCcq_-Ro_wESeooGZkDPL_GPSChhtVLZXo",
-    authDomain: "megamiweb.firebaseapp.com",
-    projectId: "megamiweb",
-    storageBucket: "megamiweb.appspot.com",
-    messagingSenderId: "386766137831",
-    appId: "1:386766137831:web:c78e9b3d52f7a691cfb542",
-    measurementId: "G-HJMYC6GQKG"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-<!-- 
-<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script> -->
-<script>
-    var db = firebase.firestore();
-
-db.collection("paint_requests").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(doc.data())
-    });
-});	
-    console.log("取得テスト")
-</script>
 </body>
 
 </html>
