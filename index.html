@@ -539,6 +539,19 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+<script>
+    var db = firebase.firestore();
+
+db.collection("paint_reqests").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(doc.data())
+    });
+});	
+    console.log("取得テスト")
+</script>
 </body>
 
 </html>
