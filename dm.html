@@ -90,15 +90,19 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
 
+        //fireStoreの初期化
         var db = firebase.firestore();
         var app5 = new Vue({
             el: '#app-5',
             data: {
                 dbInfo: [],
+                //入力名
                 inputName: "",
+                //女神様へのメッセージ
                 inputMassage: ""
             },
             methods: {
+                //女神さまへのメッセージ送信処理
                 reverseMessage: function () {
                     var _self = this;
                     db.collection("paint_requests").add({
@@ -107,12 +111,14 @@
                     })
                         .then(function (docRef) {
                             console.log("Document written with ID: ", docRef.id);
+                            //送信完了後に画面のメッセージ再取得
                             _self.viewMessage();
                         })
                         .catch(function (error) {
                             console.error("Error adding document: ", error);
                         });
                 },
+                //女神様へのメッセージをfireStoreから取得し画面表示
                 viewMessage: function () {
                     this.dbInfo = [];
                     db.collection("paint_requests").get().then((querySnapshot) => {
@@ -124,6 +130,7 @@
                 }
             },
             mounted: function () {
+                //画面ロード時にメッセージ取得
                 this.$nextTick(function () {
                     this.viewMessage();
                 })
