@@ -24,12 +24,17 @@
         <span v-if="seen">Now you see me</span>
     </div>
     <div class="search-box-wrap" id="app-5">
-        <input class type="text" placeholder="name">
-        <textarea name="massage" id="massage" cols="30" rows="10" placeholder="女神様へのお願い事"></textarea>
-        <button class="send-massage" v-on:click="reverseMessage">送信a</button>
+        <input v-model="inputName" class type="text" placeholder="name">
+        <textarea v-model="inputMassage" name="massage" id="massage" cols="30" rows="10"
+            placeholder="女神様へのお願い事"></textarea>
+        <button class="send-massage" v-on:click="reverseMessage">送信</button>
         <button class="send-massage" v-on:click="viewMessage">確認</button>
-        <p>{{massage}}</p>
-
+        <h2>みんなから女神様へのメッセージ</h2>
+        <ol>
+            <li v-for="todo in dbInfo">
+                {{ todo }}
+            </li>
+        </ol>
     </div>
     <footer class="footer">
         <a class="footer-icon" href="index.html"><svg viewBox="0 0 24 24"
@@ -69,16 +74,10 @@
             </svg></a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
             apiKey: "AIzaSyCcq_-Ro_wESeooGZkDPL_GPSChhtVLZXo",
             authDomain: "megamiweb.firebaseapp.com",
@@ -88,51 +87,49 @@
             appId: "1:386766137831:web:c78e9b3d52f7a691cfb542",
             measurementId: "G-HJMYC6GQKG"
         };
-        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
 
         var db = firebase.firestore();
-
-
-        console.log("取得テスト")
-
-
         var app5 = new Vue({
             el: '#app-5',
             data: {
-                message: 'Hello Vue.js!'
+                dbInfo: [],
+                inputName: "",
+                inputMassage: ""
             },
             methods: {
                 reverseMessage: function () {
+                    var _self = this;
                     db.collection("paint_requests").add({
-                        user_name: "Harry Bosch",
-                        massage: "てすとだよああああ",
+                        userName: this.inputName,
+                        massage: this.inputMassage,
                     })
                         .then(function (docRef) {
                             console.log("Document written with ID: ", docRef.id);
+                            _self.viewMessage();
                         })
                         .catch(function (error) {
                             console.error("Error adding document: ", error);
                         });
                 },
                 viewMessage: function () {
+                    this.dbInfo = [];
                     db.collection("paint_requests").get().then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                            this.massage = doc.data();
-                            console.log(doc.data())
+                            this.dbInfo.push(doc.data());
+                            console.log(this.dbInfo)
                         });
                     });
                 }
+            },
+            mounted: function () {
+                this.$nextTick(function () {
+                    this.viewMessage();
+                })
             }
         })
-
-
-
     </script>
-
-
-
 </body>
 
 </html>
