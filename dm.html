@@ -31,8 +31,8 @@
         <button class="send-massage" v-on:click="viewMessage">確認</button>
         <h2>みんなから女神様へのメッセージ</h2>
         <ol>
-            <li v-for="todo in dbInfo">
-                {{ todo }}
+            <li v-for="massages in dbInfo">
+                {{ massages }}
             </li>
         </ol>
     </div>
