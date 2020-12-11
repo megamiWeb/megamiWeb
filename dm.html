@@ -96,6 +96,7 @@
             el: '#app-5',
             data: {
                 dbInfo: [],
+                nextNo:0,
                 //入力名
                 inputName: "",
                 //女神様へのメッセージ
@@ -104,8 +105,9 @@
             methods: {
                 //女神さまへのメッセージ送信処理
                 reverseMessage: function () {
-                    var _self = this;
+                    let _self = this;
                     db.collection("paint_requests").add({
+                        no:this.nextNo,
                         userName: this.inputName,
                         massage: this.inputMassage,
                     })
@@ -121,11 +123,19 @@
                 //女神様へのメッセージをfireStoreから取得し画面表示
                 viewMessage: function () {
                     this.dbInfo = [];
+                    this.getDataSize();
                     db.collection("paint_requests").get().then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
                             this.dbInfo.push(doc.data());
                             console.log(this.dbInfo)
                         });
+                    });
+                },
+                // commentsコレクションの全データ件数を獲得しlengthに保存
+                getDataSize: function() {
+                    let _self = this;
+                    db.collection('paint_requests').get().then(snap => {
+                        _self.nextNo = snap.size +1// will return the collection size
                     });
                 }
             },
